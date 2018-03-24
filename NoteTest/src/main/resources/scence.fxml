@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="342.0" prefWidth="593.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller">
+   <children>
+      <TabPane layoutX="5.0" layoutY="7.0" prefHeight="324.0" prefWidth="576.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Запись">
+               <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="401.0" prefWidth="576.0">
+                     <children>
+                        <Button fx:id="clear" layoutX="478.0" layoutY="3.0" mnemonicParsing="false" onAction="#ClearAction" prefHeight="44.0" prefWidth="98.0" text="Очистить" textFill="#d00d0d">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <TextArea fx:id="Area" layoutX="4.0" layoutY="3.0" prefHeight="225.0" prefWidth="471.0" />
+                        <Button fx:id="save" disable="true" layoutX="477.0" layoutY="64.0" mnemonicParsing="false" onAction="#SaveAction" prefHeight="44.0" prefWidth="99.0" text="Сохранить" textFill="#d00d0d">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="open" disable="true" layoutX="477.0" layoutY="124.0" mnemonicParsing="false" onAction="#OpenAction" prefHeight="44.0" prefWidth="98.0" text="Загрузить" textFill="#d00d0d">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <TextField fx:id="NameText" layoutX="66.0" layoutY="240.0" prefHeight="30.0" prefWidth="109.0" />
+                        <Label layoutX="6.0" layoutY="241.0" prefHeight="0.0" prefWidth="92.0" text="Name">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="194.0" layoutY="241.0" prefHeight="30.0" prefWidth="43.0" text="Date">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="390.0" layoutY="240.0" prefHeight="30.0" prefWidth="22.0" text="Id">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="IdText" alignment="CENTER" layoutX="412.0" layoutY="242.0" prefHeight="0.0" prefWidth="65.0" textFill="#0000009c">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="DateText" alignment="CENTER" layoutX="237.0" layoutY="240.0" prefHeight="30.0" prefWidth="129.0" textFill="#0000009c">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="delete" disable="true" layoutX="477.0" layoutY="184.0" mnemonicParsing="false" onAction="#DeleteAction" prefHeight="44.0" prefWidth="98.0" text="Удалить" textFill="#d00d0d">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                     </children></AnchorPane>
+               </content>
+          </Tab>
+          <Tab text="Настройки">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="10.0" layoutY="10.0" text="IP Базы данных :">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="45.0" text="Port Базы данных :">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="80.0" text="Имя базы данных :">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="185.0" text="Пароль :">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="115.0" text="Имя таблицы :">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="150.0" text="Логин :">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="ip_data_base" layoutX="175.0" layoutY="10.0" prefHeight="15.0" prefWidth="149.0" />
+                        <TextField fx:id="port_data_base" layoutX="175.0" layoutY="45.0" />
+                        <TextField fx:id="name_data_base" layoutX="175.0" layoutY="80.0" />
+                        <TextField fx:id="name_table_data_base" layoutX="175.0" layoutY="115.0" />
+                        <TextField fx:id="login_data_base" layoutX="175.0" layoutY="150.0" />
+                        <TextField fx:id="password_data_base" layoutX="175.0" layoutY="185.0" />
+                        <Label alignment="CENTER" layoutX="324.0" layoutY="-1.0" prefHeight="27.0" prefWidth="260.0" text="Настройки">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="324.0" layoutY="19.0" prefHeight="27.0" prefWidth="260.0" text="для загрузки файла">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="344.0" layoutY="80.0" text="Дата создания файла:">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="data_file" layoutX="340.0" layoutY="115.0" prefHeight="25.0" prefWidth="228.0" text="DD-MM-YYYY" />
+                        <Label layoutX="344.0" layoutY="150.0" text="Имя файла:">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="name_file" layoutX="341.0" layoutY="185.0" prefHeight="25.0" prefWidth="227.0" />
+                        <Label layoutX="344.0" layoutY="220.0" text="ID файла:">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="id_file" layoutX="342.0" layoutY="255.0" prefHeight="25.0" prefWidth="225.0" />
+                        <Button fx:id="button_save_settings" alignment="CENTER" layoutX="9.0" layoutY="228.0" mnemonicParsing="false" onAction="#Save_settings_file" prefHeight="54.0" prefWidth="314.0" text="Сохранить настройки">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Button>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
